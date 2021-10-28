@@ -1,2 +1,7 @@
 .gradle
 .idea
+
+
+#oauth
+/src/main/resources/application-oauth.properties
+
