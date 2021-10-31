@@ -5,6 +5,16 @@
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+<!--            이미 로그인이 되었다면-->
+            {{#userName}}
+                Logged in as: <span id="user">{{userName}}</span>
+            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+<!--            로그인이 안 되어 있다면-->
+            {{^userName}}
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                <a href="/oauth2/authorization/naver" class="btn btn-success active" role="button">Naver Login</a>
+            {{/userName}}
         </div>
     </div>
 
